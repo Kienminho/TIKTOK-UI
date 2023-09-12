@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleXmark,
     faMagnifyingGlass,
-    faSignIn,
     faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
@@ -19,11 +18,9 @@ const cx = classNames.bind(styles);
 function Header() {
     const [searchResults, setSearchResults] = useState([]);
     useEffect(() => {
-        {
-            setTimeout(() => {
-                setSearchResults([]);
-            }, 0);
-        }
+        setTimeout(() => {
+            setSearchResults([]);
+        }, 0);
     });
     return (
         <header className={cx('wrapper')}>
@@ -74,9 +71,7 @@ function Header() {
                 </Tippy>
                 <div className={cx('actions')}>
                     <Button text>Upload</Button>
-                    <Button primary >
-                        Log in
-                    </Button>
+                    <Button primary>Log in</Button>
                 </div>
             </div>
         </header>
